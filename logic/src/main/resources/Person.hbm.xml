@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.s15920.model.Person" table="person" schema="mas">
+        <id name="personId">
+            <column name="person_id" sql-type="int(11)"/>
+        </id>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="lastName">
+            <column name="last_name" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="mobile">
+            <column name="mobile" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="whitelisted">
+            <column name="whitelisted" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="active">
+            <column name="active" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="username">
+            <column name="username" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="addressId">
+            <column name="address_id" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

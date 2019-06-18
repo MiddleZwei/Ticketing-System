@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.s15920.model.Seat" table="seat" schema="mas">
+        <id name="seatId">
+            <column name="seat_id" sql-type="int(11)"/>
+        </id>
+        <property name="row">
+            <column name="row" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="number">
+            <column name="number" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="ticketId">
+            <column name="ticket_id" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

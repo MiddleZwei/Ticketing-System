@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+      fx:controller="com.s15920.MenuController"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="265.0" layoutY="174.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="122.0" text="SHOW CONCERTS"
+              fx:id="showConcertsButton"
+              onAction="#handleShowConcerts"/>
+      <TitledPane animated="false" layoutX="163.0" layoutY="-31.0" text="untitled" />
+    <AnchorPane layoutX="7.0" layoutY="7.0" minHeight="0.0" minWidth="0.0" prefHeight="91.0" prefWidth="584.0">
+         <children>
+            <Text layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" textAlignment="CENTER" wrappingWidth="242.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="472.0" layoutY="36.0" mnemonicParsing="false" text="Log Out" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="418.0" layoutY="174.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="122.0" text="SHOW CUSTOMERS"
+              fx:id="showCustomersButton"
+            onAction="#handleShowCustomers"/>
+      <DatePicker layoutX="101.0"  fx:id="from" layoutY="174.0" prefHeight="25.0" prefWidth="111.0" />
+      <DatePicker layoutX="101.0" fx:id="to" layoutY="214.0" prefHeight="25.0" prefWidth="111.0" />
+      <Label layoutX="50.0" layoutY="178.0" text="From" />
+      <Label layoutX="50.0" layoutY="218.0" text="To" />
+      <TextArea editable="false" layoutY="291.0" prefHeight="108.0" prefWidth="600.0" text="To buy tickets or view concert's info: Select dates and press show concerts&#10;&#10;To issue refunds, send copies of receipts, black/whitelist cusomers etc. press Show customers" />
+   </children>
+</Pane>

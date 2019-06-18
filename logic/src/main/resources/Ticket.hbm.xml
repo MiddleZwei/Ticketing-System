@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.s15920.model.Ticket" table="ticket" schema="mas">
+        <id name="ticketId">
+            <column name="ticket_id" sql-type="int(11)"/>
+        </id>
+        <property name="validFrom">
+            <column name="validFrom" sql-type="date" not-null="true"/>
+        </property>
+        <property name="validTo">
+            <column name="validTo" sql-type="date" not-null="true"/>
+        </property>
+        <property name="amount">
+            <column name="amount" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="title">
+            <column name="title" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="concertId">
+            <column name="concert_id" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

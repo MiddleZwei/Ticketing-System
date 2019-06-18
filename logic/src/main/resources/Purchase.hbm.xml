@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.s15920.model.Purchase" table="purchase" schema="mas">
+        <id name="purchaseId">
+            <column name="purchase_id" sql-type="int(11)"/>
+        </id>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="paymentMethod">
+            <column name="payment_method" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="cardNumber">
+            <column name="card_number" sql-type="varchar(16)" length="16" not-null="true"/>
+        </property>
+        <property name="emailedReceipt">
+            <column name="emailed_receipt" sql-type="tinyint(1)"/>
+        </property>
+        <property name="amountPaid">
+            <column name="amount_paid" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="refunded">
+            <column name="refunded" sql-type="tinyint(1)"/>
+        </property>
+        <property name="cashierId">
+            <column name="cashier_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="ticketId">
+            <column name="ticket_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="personId">
+            <column name="person_id" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

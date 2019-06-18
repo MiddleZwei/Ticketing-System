@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.s15920.model.Address" table="address" schema="mas">
+        <id name="addressId">
+            <column name="address_id" sql-type="int(11)"/>
+        </id>
+        <property name="addressLine1">
+            <column name="address_line_1" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="addressLine2">
+            <column name="address_line_2" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="district">
+            <column name="district" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="city">
+            <column name="city" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="postalCode">
+            <column name="postal_code" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
