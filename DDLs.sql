@@ -145,13 +145,13 @@ create table Purchase (
    FOREIGN KEY fk_cashier(cashier_id)
    REFERENCES Cashier(cashier_id)
    ON UPDATE CASCADE
-   ON DELETE RESTRICT,
+   ON DELETE CASCADE,
    
    ticket_id INT,
    FOREIGN KEY fk_ticket(ticket_id)
    REFERENCES Ticket(ticket_id)
    ON UPDATE CASCADE
-   ON DELETE RESTRICT,
+   ON DELETE CASCADE,
    
    person_id int,
    FOREIGN KEY fk_person(person_id)
