@@ -87,4 +87,4 @@ _**Classes & attributes:** class extents, persistence, complex attributes, optio
 
 [sequence_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Sequence_Diagram.jpg "Sequence diagram"
 
-[database]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/79d101947a221fa48c76016b83f5790708644565/Database_structure.svg "Database structure"
+[database]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/08f0fc38d4c27fe1ce5088e747a8c82798d3910b/Database_structure.jpg "Database structure"
