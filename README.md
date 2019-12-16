@@ -71,14 +71,20 @@ _**Classes & attributes:** class extents, persistence, complex attributes, optio
 **Associations:** 1-1, with an attribute, qualified, composition  
 **Inheritance:** abstract classes and polymorphic method invocation, overlapping inheritance, multi-inheritance, multi-aspect inheritance, dynamic inheritance  
 **Constraints:** attribute constraints, unique, subset, ordered, bag, XOR  
-**ORM:** classes, associations, inheritance_  
+**ORM:** classes, associations, inheritance
 
 
 
-[analytical_diagram]: O "Analytical class diagram"
-[design_diagram]: O "Design class diagram"
-[use_case_diagram]: O "Use case diagram"
-[activity_diagram]: O "Activity class diagram"
-[state_diagram]: O "State diagram"
-[sequence_diagram]: O "Sequence diagram"
-[database]: O "Database structure"
+[analytical_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Analytical_class_diagram.jpg "Analytical class diagram"
+
+[design_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Design_class_diagram.jpg "Design class diagram"
+
+[use_case_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Use_case_diagram.jpg "Use case diagram"
+
+[activity_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Activity_diagram.jpg "Activity class diagram"
+
+[state_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/State_diagram.jpg "State diagram"
+
+[sequence_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Sequence_Diagram.jpg "Sequence diagram"
+
+[database]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/79d101947a221fa48c76016b83f5790708644565/Database_structure.svg "Database structure"
