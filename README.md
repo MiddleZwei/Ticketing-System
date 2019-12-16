@@ -21,7 +21,8 @@ The **musician** will be able to see when their contracts start and end, the amo
 
 
 ## DDL
-[Database DDL](https://github.com/MiddleZwei/Ticketing-System/blob/master/DDLs.sql)  
+Access the DDL file via [Database DDL](https://github.com/MiddleZwei/Ticketing-System/blob/master/DDLs.sql)  
+
 ![Database structure][database]  
 
 ## Dependencies and Maven project structure
