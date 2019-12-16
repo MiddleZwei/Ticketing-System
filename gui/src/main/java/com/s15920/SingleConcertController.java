@@ -20,6 +20,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.net.URL;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -34,11 +35,16 @@ public class SingleConcertController implements Initializable {
     private Text concertNameTextField;
     private String concertName;
 
+
+    private Date from;
+    private Date to;
     private int concertId;
 
     public SingleConcertController(int concertId, String concertName) {
         this.concertId = concertId;
         this.concertName = concertName;
+//        this.from = from;
+//        this.to = to;
     }
 
     public SingleConcertController() {
@@ -83,7 +89,7 @@ public class SingleConcertController implements Initializable {
         tickets = ticketService.getTicketsByConcertId(concertId); // FIXME
         System.out.println("Single concert :"+concertId);
         for (Ticket c : tickets){ // FIXME display all concerts, the last one 5 times
-            System.out.println(c);
+//            System.out.println(c);
 
             List<StringProperty> row = new ArrayList<>();
 
@@ -102,7 +108,7 @@ public class SingleConcertController implements Initializable {
     @FXML
     protected void handleBackButton(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/concerts.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/menu.fxml"));
             Utility.loadNewScene(fxmlLoader);
         } catch(Exception e) {
             e.printStackTrace();

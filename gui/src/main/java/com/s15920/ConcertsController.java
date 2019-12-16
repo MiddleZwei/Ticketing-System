@@ -63,7 +63,7 @@ public class ConcertsController implements Initializable  {
     private Button saveButton;
 
     @FXML
-    private TableView<List<StringProperty>> tableConcerts;
+    private TableView<List<StringProperty>> tableConcerts = new TableView<>();
 
     @FXML
     private Button backButton;
@@ -95,8 +95,6 @@ public class ConcertsController implements Initializable  {
 
     private void buildData() throws ParseException {
         ObservableList<List<StringProperty>> data = FXCollections.observableArrayList();
-//        System.out.println(fromText);
-//        System.out.println(toText);
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         java.util.Date date1 = sdf.parse(fromText);
@@ -105,16 +103,25 @@ public class ConcertsController implements Initializable  {
         java.sql.Date sqlStartDate = new java.sql.Date(date1.getTime());
         java.sql.Date sqlEndDate = new java.sql.Date(date1.getTime());
 
-//        System.out.println(sqlEndDate.toString());
         concerts = concertService.getAllConcertsBetweenDates(sqlStartDate, sqlEndDate);
+//        concerts.forEach(System.out::println);
         for (Concert c : concerts){
-
             List<StringProperty> row = new ArrayList<>();
 
             titleColumn.setCellValueFactory(cdf -> new SimpleStringProperty(c.getTitle()));
             startColumn.setCellValueFactory(cdf -> new SimpleStringProperty(c.getFrom().toString()));
             durationColumn.setCellValueFactory(cdf -> new SimpleStringProperty("duration"));
             endColumn.setCellValueFactory(cdf -> new SimpleStringProperty(c.getTo().toString()));
+
+//            row.add(0, new SimpleStringProperty(c.getTitle()));
+//            row.add(1, new SimpleStringProperty(c.getFrom().toString()));
+//            row.add(2, new SimpleStringProperty("duration"));
+//            row.add(3, new SimpleStringProperty(c.getTo().toString()));
+
+//            tableConcerts.getColumns().add(titleColumn);
+//            tableConcerts.getColumns().add(startColumn);
+//            tableConcerts.getColumns().add(durationColumn);
+//            tableConcerts.getColumns().add(endColumn);
 
             addButtonPerformers();
             addButtonTickets();
@@ -123,6 +130,7 @@ public class ConcertsController implements Initializable  {
         }
 
         tableConcerts.setItems(data);
+
     }
 
     private void addButtonTickets() {
@@ -136,8 +144,6 @@ public class ConcertsController implements Initializable  {
                     {
                         btn.setOnAction((ActionEvent event) -> {
                             List<StringProperty> data = getTableView().getItems().get(getIndex());
-//                            ticketService.getTicketsByConcertId(1); // TODO
-//                            System.out.println("adcds");
                             handleShowTickets();
                             System.out.println("selectedData: " + data);
                         });

@@ -26,12 +26,13 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <Button layoutX="472.0" layoutY="36.0" mnemonicParsing="false" text="Log Out" />
+            <Button layoutX="472.0" layoutY="36.0" mnemonicParsing="false" text="Log Out"
+            onAction="#handleLogOutButton"/>
          </children>
       </AnchorPane>
       <Button layoutX="418.0" layoutY="174.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="122.0" text="SHOW CUSTOMERS"
               fx:id="showCustomersButton"
-            onAction="#handleShowCustomers"/>
+            onAction="#handleShowAllCustomers"/>
       <DatePicker layoutX="101.0"  fx:id="from" layoutY="174.0" prefHeight="25.0" prefWidth="111.0" />
       <DatePicker layoutX="101.0" fx:id="to" layoutY="214.0" prefHeight="25.0" prefWidth="111.0" />
       <Label layoutX="50.0" layoutY="178.0" text="From" />

@@ -26,8 +26,6 @@ public class ThankYouController implements Initializable {
         try {
             // TODO
             System.out.println("copy receipt");
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/payment.fxml"));
-//            Utility.loadNewScene(fxmlLoader);
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -47,8 +45,6 @@ public class ThankYouController implements Initializable {
         try {
             // TODO
             System.out.println("copy ticket");
-//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/single_concert.fxml"));
-//            Utility.loadNewScene(fxmlLoader);
         } catch(Exception e) {
             e.printStackTrace();
         }

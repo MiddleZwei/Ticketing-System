@@ -7,6 +7,8 @@ import com.s15920.service.IPersonService;
 import com.s15920.service.IPurchaseService;
 import com.s15920.service.PersonService;
 import com.s15920.service.PurchaseService;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,10 +41,12 @@ public class TicketController implements Initializable {
     private AnchorPane anchorPane;
 
     @FXML
-    private CheckBox emailCheck;
+    private CheckBox emailCheck = new CheckBox("Email receipt checkbox");
+    private Boolean emailCheckBool = Boolean.FALSE;;
 
     @FXML
-    private CheckBox personalDataCheck;
+    private CheckBox personalDataCheck = new CheckBox("Personal data checkbox");
+    private Boolean personalDataCheckBool = Boolean.FALSE;
 
     @FXML
     private TextField firstName;
@@ -63,12 +67,46 @@ public class TicketController implements Initializable {
     @FXML
     private Button submitAndPayButton;
 
+
+
     public TicketController(String ticketId, String details) {
         this.ticketNumber = ticketId;
         this.details = details;
     }
 
     public TicketController() {
+    }
+
+    private void setupCheckerListeners() {
+        emailCheck.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println("------------------");
+            if(newValue){
+                System.out.println("CheckBox: "+ emailCheck.getText());
+                System.out.println("Old value: "+ oldValue);
+                System.out.println("New value value: "+ newValue);
+            }else{
+                System.out.println("CheckBox: "+ emailCheck.getText());
+                System.out.println("Old value: "+ oldValue);
+                System.out.println("New value value: "+ newValue);
+            }
+            emailCheckBool = newValue;
+            System.out.println("------------------");
+        });
+
+        personalDataCheck.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println("------------------");
+            if(newValue){
+                System.out.println("CheckBox: "+ personalDataCheck.getText());
+                System.out.println("Old value: "+ oldValue);
+                System.out.println("New value value: "+ newValue);
+            }else{
+                System.out.println("CheckBox: "+ personalDataCheck.getText());
+                System.out.println("Old value: "+ oldValue);
+                System.out.println("New value value: "+ newValue);
+            }
+            personalDataCheckBool = newValue;
+            System.out.println("------------------");
+        });
     }
 
     @FXML
@@ -83,21 +121,22 @@ public class TicketController implements Initializable {
             System.out.println("--------------------------------------");
             System.out.println("Selected first name: "+firstName);
             System.out.println("Selected last name from: "+lastName);
-            System.out.println("Selected email "+email);
+            System.out.println("Selected email: "+email);
             System.out.println("Selected mobile: "+mobile);
 
             Person person = personService.saveOrUpdate(fn, ln, email, mobile);
 
-            Byte ec = 1;
-            Byte pdc = 1;
 
-            System.out.println("Selected email checkbox "+ec);
+            Byte ec = (byte)(emailCheckBool?1:0);
+            Byte pdc = (byte)(personalDataCheckBool?1:0);
+
+            System.out.println("Selected email checkbox: "+ec);
             System.out.println("Selected personal data checkbox: "+pdc);
+
+            purchaseService.saveOrUpdate(person, ec, pdc);
 
             System.out.println("--------------------------------------");
 
-
-//            purchaseService.saveOrUpdate(person, ec, pdc); // FIXME sql insert error
             Utility.loadNewScene(fxmlLoader);
         } catch(Exception e) {
             e.printStackTrace();
@@ -106,7 +145,7 @@ public class TicketController implements Initializable {
 
     public void handleBackButton(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/single_concert.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/menu.fxml"));
             Utility.loadNewScene(fxmlLoader);
         } catch(Exception e) {
             e.printStackTrace();
@@ -117,6 +156,8 @@ public class TicketController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         purchaseService = new PurchaseService();
         personService = new PersonService();
+        setupCheckerListeners();
+
     }
 
     public void setDetails(String details) {
