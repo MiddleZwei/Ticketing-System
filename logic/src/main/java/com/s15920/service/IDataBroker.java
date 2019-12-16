@@ -10,6 +10,9 @@ interface IDataBroker {
 
     // concert
     int saveOrUpdate(Concert concert);
+
+    Person findPersonById(int personId);
+
     void delete(Concert concert);
     void setStartTime(Date startTime);
     void setEndTime(Date startTime);
@@ -68,7 +71,7 @@ interface IDataBroker {
     void delete(Ticket ticket);
     void purchase();
     void showDetails();
-    List<Ticket> getTicketsByConcertId(int id);
+    List<Ticket> getTicketsByConcertId(Integer id);
 
 
     Person saveOrUpdate(String fn, String ln, String email, String mobile);

@@ -17,17 +17,28 @@ public class ConcertService implements IConcertService{
         this.db = new DataBroker();
     }
 
+    /**
+     * @param from
+     * @param to
+     * @return
+     */
     @Override
     public List<Concert> getAllConcertsBetweenDates(Date from, Date to) {
         return db.getAllConcertsBetweenDates(from, to);
     }
 
+    /**
+     * @param concert
+     */
     @Override
     public void saveOrUpdate(Concert concert) {
         db.saveOrUpdate(concert);
     }
 
 
+    /**
+     * @return
+     */
     @Override
     public List<Concert> getAllConcerts() {
         return db.getAllConcerts();
