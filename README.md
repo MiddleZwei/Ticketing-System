@@ -21,19 +21,19 @@ The **musician** will be able to see when their contracts start and end, the amo
 
 
 ## DDL
-Access the DDL file via [Database DDL](https://github.com/MiddleZwei/Ticketing-System/blob/master/DDLs.sql)  
+Access the DDL file via [Database DDL](https://github.com/eli-halych/Ticketing-System/blob/master/DDLs.sql)  
 
 ![Database structure][database]  
 
 ## Dependencies and Maven project structure
-[Parent](https://github.com/MiddleZwei/Ticketing-System/blob/master/pom.xml)  
-[GUI](https://github.com/MiddleZwei/Ticketing-System/blob/master/gui/pom.xml)  
-[Logic](https://github.com/MiddleZwei/Ticketing-System/blob/master/logic/pom.xml)  
+[Parent](https://github.com/eli-halych/Ticketing-System/blob/master/pom.xml)  
+[GUI](https://github.com/eli-halych/Ticketing-System/blob/master/gui/pom.xml)  
+[Logic](https://github.com/eli-halych/Ticketing-System/blob/master/logic/pom.xml)  
 
 ## GUI of the desktop app
 Used a 2 level Maven project: tehre are 2 sub projects:
-- GUI: [GUI sub project](https://github.com/MiddleZwei/Ticketing-System/tree/master/gui)
-- Logic: [Logic sub project](https://github.com/MiddleZwei/Ticketing-System/tree/master/logic)
+- GUI: [GUI sub project](https://github.com/eli-halych/Ticketing-System/tree/master/gui)
+- Logic: [Logic sub project](https://github.com/eli-halych/Ticketing-System/tree/master/logic)
 
 ## Tests
 This version of the application doesn't cover tests. The focus is made on OOP in this initial version.
@@ -76,16 +76,16 @@ _**Classes & attributes:** class extents, persistence, complex attributes, optio
 
 
 
-[analytical_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Analytical_class_diagram.jpg "Analytical class diagram"
+[analytical_diagram]: https://gist.githubusercontent.com/eli-halych/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Analytical_class_diagram.jpg "Analytical class diagram"
 
-[design_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Design_class_diagram.jpg "Design class diagram"
+[design_diagram]: https://gist.githubusercontent.com/eli-halych/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Design_class_diagram.jpg "Design class diagram"
 
-[use_case_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Use_case_diagram.jpg "Use case diagram"
+[use_case_diagram]: https://gist.githubusercontent.com/eli-halych/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Use_case_diagram.jpg "Use case diagram"
 
-[activity_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Activity_diagram.jpg "Activity class diagram"
+[activity_diagram]: https://gist.githubusercontent.com/eli-halych/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Activity_diagram.jpg "Activity class diagram"
 
-[state_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/State_diagram.jpg "State diagram"
+[state_diagram]: https://gist.githubusercontent.com/eli-halych/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/State_diagram.jpg "State diagram"
 
-[sequence_diagram]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Sequence_Diagram.jpg "Sequence diagram"
+[sequence_diagram]: https://gist.githubusercontent.com/eli-halych/3788ad557863a33c149608a75ee4191c/raw/0546c3ee35192d43ecec5e1846dd0d5c3e688a1e/Sequence_Diagram.jpg "Sequence diagram"
 
-[database]: https://gist.githubusercontent.com/MiddleZwei/3788ad557863a33c149608a75ee4191c/raw/08f0fc38d4c27fe1ce5088e747a8c82798d3910b/Database_structure.jpg "Database structure"
+[database]: https://gist.githubusercontent.com/eli-halych/3788ad557863a33c149608a75ee4191c/raw/08f0fc38d4c27fe1ce5088e747a8c82798d3910b/Database_structure.jpg "Database structure"
